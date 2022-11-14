@@ -10,8 +10,8 @@ type Map[K comparable, V any] struct {
 	m     map[K]V
 }
 
-func New[K comparable, V any]() Map[K, V] {
-	return Map[K, V]{
+func New[K comparable, V any]() *Map[K, V] {
+	return &Map[K, V]{
 		m: make(map[K]V),
 	}
 }
